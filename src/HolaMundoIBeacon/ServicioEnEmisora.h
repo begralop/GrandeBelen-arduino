@@ -1,8 +1,8 @@
 // -*- mode: c++ -*-
 
 // ----------------------------------------------------------
-// Jordi Bataller i Mascarell
-// 2019-07-17
+// Belén Grande López
+// 2021-10-4
 // ----------------------------------------------------------
 #ifndef SERVICIO_EMISORA_H_INCLUIDO
 #define SERVICIO_EMISORA_H_INCLUIDO
@@ -76,6 +76,13 @@ public:
   public:
 
 	// .........................................................
+   /*
+     * Constructor de la clase
+     * 
+     * [char]  nombreCaracteristica_  -  Le pasamos un char con el nombre de la caracteristica
+     *
+     * No devuelve nada
+    */
 	// .........................................................
 	Caracteristica( const char * nombreCaracteristica_ )
 	  :
@@ -85,6 +92,16 @@ public:
 	} // ()
 
 	// .........................................................
+   /*
+     * Constructor 2 de la clase
+     * 
+     * [char]  nombreCaracteristica_  -  Le pasamos un char con el nombre de la caracteristica
+     * Z  propos  -  Le pasamos un uint8_t
+     * SecureMode_t  permisoRead  -  Para que tenga permiso para leer
+     * SecureMode_t  permisoWrite  -  Para que tenga permiso para escribir
+     *
+     * No devuelve nada
+    */
 	// .........................................................
 	Caracteristica( const char * nombreCaracteristica_ ,
 					uint8_t props,
@@ -100,6 +117,13 @@ public:
   private:
 	// .........................................................
 	// CHR_PROPS_WRITE , CHR_PROPS_READ ,  CHR_PROPS_NOTIFY 
+   /*
+     * Método para asignar propiedades
+     * 
+     * N  props  -  Le pasamos un uint8_t
+     *
+     * No devuelve nada
+    */
 	// .........................................................
 	void asignarPropiedades ( uint8_t props ) {
 	  // no puedo escribir AUN si el constructor llama a esto: Serial.println( " laCaracteristica.setProperties( props ); ");
@@ -108,6 +132,14 @@ public:
 
 	// .........................................................
 	// BleSecurityMode::SECMODE_OPEN  , BleSecurityMode::SECMODE_NO_ACCESS
+   /*
+     * Método para asignar permisos
+     * 
+     * SecureMode_t  permisoRead  -  Para que tenga permiso para leer
+     * SecureMode_t  permisoWrite  -  Para que tenga permiso para escribir
+     *
+     * No devuelve nada
+    */
 	// .........................................................
 	void asignarPermisos( SecureMode_t permisoRead, SecureMode_t permisoWrite ) {
 	  // no puedo escribir AUN si el constructor llama a esto: Serial.println( "laCaracteristica.setPermission( permisoRead, permisoWrite ); " );
@@ -115,6 +147,13 @@ public:
 	} // ()
 
 	// .........................................................
+   /*
+     * Método para asignar tamaños
+     * 
+     * N  tam  -  Le pasamos un uint8_t con el tamaño
+     *
+     * No devuelve nada
+    */
 	// .........................................................
 	void asignarTamanyoDatos( uint8_t tam ) {
 	  // no puedo escribir AUN si el constructor llama a esto: Serial.print( " (*this).laCaracteristica.setFixedLen( tam = " );
@@ -125,6 +164,16 @@ public:
 
   public:
 	// .........................................................
+   /*
+     * Método para asignar propiedades, permisos y tamaño de datos
+     * 
+     * N  propos  -  Le pasamos un uint8_t
+     * SecureMode_t  permisoRead  -  Para que tenga permiso para leer
+     * SecureMode_t  permisoWrite  -  Para que tenga permiso para escribir
+     * Z  propos  -  Le pasamos un uint8_t
+     *
+     * No devuelve nada
+    */
 	// .........................................................
 	void asignarPropiedadesPermisosYTamanyoDatos( uint8_t props,
 												 SecureMode_t permisoRead,
@@ -137,6 +186,13 @@ public:
 												 
 
 	// .........................................................
+   /*
+     * Método para escribir datos
+     * 
+     * [char]  str  -  Le pasamos un char 
+     *
+     * No devuelve nada
+    */
 	// .........................................................
 	uint16_t escribirDatos( const char * str ) {
 	  // Serial.print( " return (*this).laCaracteristica.write( str  = " );
@@ -150,6 +206,13 @@ public:
 	} // ()
 
 	// .........................................................
+   /*
+     * Método para notificar datos
+     * 
+     * [char]  str  -  Le pasamos un char 
+     *
+     * Z  -  Devuelve un uint16_t
+    */
 	// .........................................................
 	uint16_t notificarDatos( const char * str ) {
 	  
@@ -159,12 +222,26 @@ public:
 	} //  ()
 
 	// .........................................................
+   /*
+     * Método para instalar callback de caracteristica escrita
+     * 
+     * CallbackCaracteristicaEscrita  cb  -  Le pasamos un pbjeto CallbackCaracteristicaEscrita 
+     *
+     * No devuelve nada
+    */
 	// .........................................................
 	void instalarCallbackCaracteristicaEscrita( CallbackCaracteristicaEscrita cb ) {
 	  (*this).laCaracteristica.setWriteCallback( cb );
 	} // ()
 
 	// .........................................................
+  /*
+     * Método para activar
+     * 
+     * No le pasamos nada
+     *
+     * No devuelve nada
+    */
 	// .........................................................
 	void activar() {
 	  err_t error = (*this).laCaracteristica.begin();
@@ -199,6 +276,13 @@ private:
 public:
   
   // .........................................................
+  /*
+     * Constructor de la clase
+     * 
+     * [char]  nombreServicio_  -  Le pasamos un char con el nombre del servicio
+     *
+     * No devuelve nada
+    */
   // .........................................................
   ServicioEnEmisora( const char * nombreServicio_ )
 	:
@@ -208,6 +292,13 @@ public:
   } // ()
   
   // .........................................................
+   /*
+     * Método para escribir un uuid
+     * 
+     * No le pasamos nada
+     *
+     * No devuelve nada
+    */
   // .........................................................
   void escribeUUID() {
 	Serial.println ( "**********" );
@@ -218,12 +309,26 @@ public:
   } // ()
 
   // .........................................................
+   /*
+     * Método para añadir una caracteristica
+     * 
+     * Caracteristica  car -  Le pasamos una caracteristica
+     *
+     * No devuelve nada
+    */
   // .........................................................
   void anyadirCaracteristica( Caracteristica & car ) {
 	(*this).lasCaracteristicas.push_back( & car );
   } // ()
 
   // .........................................................
+   /*
+     * Método para activar el servicio
+     * 
+     * No le pasamos nada
+     *
+     * No devuelve nada
+    */
   // .........................................................
   void activarServicio( ) {
 	// entiendo que al llegar aquí ya ha sido configurado

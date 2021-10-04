@@ -3,7 +3,7 @@
 // --------------------------------------------------------------
 //
 // Belén Grande López
-// 2021-
+// 2021-10-4
 //
 // --------------------------------------------------------------
 
@@ -52,6 +52,13 @@ namespace Globales {
 }; // namespace
 
 // --------------------------------------------------------------
+ /*
+     * Método para inicializar la placa
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
 // --------------------------------------------------------------
 void inicializarPlaquita () {
 
@@ -60,7 +67,13 @@ void inicializarPlaquita () {
 } // ()
 
 // --------------------------------------------------------------
-// setup()
+ /*
+     * Método para el setup
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
 // --------------------------------------------------------------
 void setup() {
 
@@ -96,6 +109,13 @@ void setup() {
 } // setup ()
 
 // --------------------------------------------------------------
+ /*
+     * Método para hacer brillar las luces
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
 // --------------------------------------------------------------
 inline void lucecitas() {
   using namespace Globales;
@@ -118,6 +138,13 @@ namespace Loop {
 };
 
 // ..............................................................
+ /*
+     * Método para el loop
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
 // ..............................................................
 void loop () {
 
