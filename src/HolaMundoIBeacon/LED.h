@@ -4,11 +4,18 @@
 #define LED_H_INCLUIDO
 
 // ----------------------------------------------------------
-// Jordi Bataller i Mascarell
-// 2019-07-07
+// Belén Grande López
+// 2021-10-4
 // ----------------------------------------------------------
 
 // ----------------------------------------------------------
+ /*
+     * Método para esperar
+     *
+     * L  tiempo  -  Le pasamos un long con el tiempo de espera
+     *
+     * No devuelve nada
+ */
 // ----------------------------------------------------------
 void esperar (long tiempo) {
   delay (tiempo);
@@ -18,11 +25,18 @@ void esperar (long tiempo) {
 // ----------------------------------------------------------
 class LED {
 private:
-  int numeroLED;
-  bool encendido;
+  int numeroLED;  // Z
+  bool encendido;  // VoF
 public:
 
   // .........................................................
+  /*
+     * Constructor de la clase
+     *
+     * Z  numero  -  Le pasamos un int con el numero 
+     *
+     * No devuelve nada
+     */
   // .........................................................
   LED (int numero)
 	: numeroLED (numero), encendido(false)
@@ -32,6 +46,13 @@ public:
   }
 
   // .........................................................
+  /*
+     * Método para encender el led
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
   // .........................................................
   void encender () {
 	digitalWrite(numeroLED, HIGH); 
@@ -39,6 +60,13 @@ public:
   }
 
   // .........................................................
+    /*
+     * Método para apagar el led
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
   // .........................................................
   void apagar () {
 	  digitalWrite(numeroLED, LOW);
@@ -46,6 +74,13 @@ public:
   }
 
   // .........................................................
+    /*
+     * Método para alternar el led
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
   // .........................................................
   void alternar () {
 	if (encendido) {
@@ -56,6 +91,13 @@ public:
   } // ()
 
   // .........................................................
+    /*
+     * Método para hacer brillar el led
+     *
+     * L  tiempo  -  Le pasamos un long con el tiempo que debe esperar para brillar 
+     *
+     * No devuelve nada
+  */
   // .........................................................
   void brillar (long tiempo) {
 	encender ();

@@ -2,8 +2,8 @@
 // -*- mode: c++ -*-
 
 // ----------------------------------------------------------
-// Jordi Bataller i Mascarell
-// 2019-07-07
+// Belén Grande López
+// 2021-10-4
 // ----------------------------------------------------------
 
 #ifndef PUERTO_SERIE_H_INCLUIDO
@@ -15,6 +15,13 @@ class PuertoSerie  {
 
 public:
   // .........................................................
+    /*
+     * Constructor de la clase
+     * 
+     * L  baudios  -  Le pasamos un long con los baudios
+     *
+     * No devuelve nada
+    */
   // .........................................................
   PuertoSerie (long baudios) {
 	Serial.begin( baudios );
@@ -22,6 +29,13 @@ public:
   } // ()
 
   // .........................................................
+  /*
+     * Método para esperar si hay disponible algún puerto
+     * 
+     * No le pasamos nada
+     *
+     * No devuelve nada
+    */
   // .........................................................
   void esperarDisponible() {
 
@@ -32,6 +46,13 @@ public:
   } // ()
 
   // .........................................................
+    /*
+     * Método para escribir
+     * 
+     * T  mensaje  -  Le pasamos un mensaje
+     *
+     * No devuelve nada
+    */
   // .........................................................
   template<typename T>
   void escribir (T mensaje) {

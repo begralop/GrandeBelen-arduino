@@ -1,5 +1,10 @@
 // -*- mode: c++ -*-
 
+// --------------------------------------------------------------
+// Belén Grande López
+// 2021-10-4
+// --------------------------------------------------------------
+
 #ifndef MEDIDOR_H_INCLUIDO
 #define MEDIDOR_H_INCLUIDO
 
@@ -14,24 +19,51 @@ private:
 public:
 
   // .....................................................
-  // constructor
+    /*
+     * Constructor de la clase
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
   // .....................................................
   Medidor(  ) {
   } // ()
 
   // .....................................................
+    /*
+     * Método para iniciar el medidor
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
   // .....................................................
   void iniciarMedidor() {
 	// las cosas que no se puedan hacer en el constructor, if any
   } // ()
 
   // .....................................................
+    /*
+     * Método para medir el CO2 
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
   // .....................................................
   int medirCO2() {
 	return 235;
   } // ()
 
   // .....................................................
+    /*
+     * Método para medor la temperatura
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
   // .....................................................
   int medirTemperatura() {
 	return -12; // qué frío !

@@ -1,7 +1,8 @@
 // -*- mode: c++ -*-
 
 // --------------------------------------------------------------
-// Jordi Bataller i Mascarell
+// Belén Grande López
+// 2021-10-4
 // --------------------------------------------------------------
 
 #ifndef PUBLICADOR_H_INCLUIDO
@@ -23,6 +24,10 @@ private:
   // ............................................................
   // ............................................................
 public:
+
+  /*
+     * Objeto del tipo emisoraBLE
+  */
   EmisoraBLE laEmisora {
 	"GTI-3A", //  nombre emisora
 	  0x004c, // fabricanteID (Apple)
@@ -36,6 +41,9 @@ public:
 public:
 
   // ............................................................
+    /*
+     * objeto enum
+  */
   // ............................................................
   enum MedicionesID  {
 	CO2 = 11,
@@ -44,6 +52,13 @@ public:
   };
 
   // ............................................................
+    /*
+     * Constructor de la clase
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
   // ............................................................
   Publicador( ) {
 	// ATENCION: no hacerlo aquí. (*this).laEmisora.encenderEmisora();
@@ -51,12 +66,28 @@ public:
   } // ()
 
   // ............................................................
+    /*
+     * Método para encender la emisora
+     *
+     * No le pasamos nada
+     *
+     * No devuelve nada
+  */
   // ............................................................
   void encenderEmisora() {
 	(*this).laEmisora.encenderEmisora();
   } // ()
 
   // ............................................................
+    /*
+     * Método para publicar el CO2
+     * 
+     * R  valorCO2  -  Le pasamos en un int16_t el valor del CO2
+     * Z  contador  -  Le pasamos en un uint8_t el valor del contador
+     * N  tiempoEspera  -  Le pasamos en un long el tiempo de espera
+     *
+     * No devuelve nada
+    */
   // ............................................................
   void publicarCO2( int16_t valorCO2, uint8_t contador,
 					long tiempoEspera ) {
@@ -93,6 +124,15 @@ public:
   } // ()
 
   // ............................................................
+   /*
+     * Método para publicar la temperatura
+     * 
+     * R  valorTemperatura  -  Le pasamos en un int16_t el valor de la temperatura
+     * Z  contador  -  Le pasamos en un uint8_t el valor del contador
+     * N  tiempoEspera  -  Le pasamos en un long el tiempo de espera
+     *
+     * No devuelve nada
+    */
   // ............................................................
   void publicarTemperatura( int16_t valorTemperatura,
 							uint8_t contador, long tiempoEspera ) {
