@@ -22,9 +22,9 @@ public:
     /*
      * Constructor de la clase
      *
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
   */
   // .....................................................
   Medidor(  ) {
@@ -34,9 +34,9 @@ public:
     /*
      * Método para iniciar el medidor
      *
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
   */
   // .....................................................
   void iniciarMedidor() {
@@ -47,9 +47,9 @@ public:
     /*
      * Método para medir el CO2 
      *
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
   */
   // .....................................................
   int medirCO2() {
@@ -60,9 +60,9 @@ public:
     /*
      * Método para medor la temperatura
      *
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
   */
   // .....................................................
   int medirTemperatura() {

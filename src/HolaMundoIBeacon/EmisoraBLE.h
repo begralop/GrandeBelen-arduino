@@ -40,11 +40,11 @@ public:
      /*
      * Constructor de la clase
      *
-     * [char]  nombreEmisora_  -  Le pasamos un char con el nombre de la emisora
-     * N  fabricanteID_  -  Le pasamos un uint16_t con el id del fabricante
-     * Z  txPower_  -  Le pasamos un int8_t con el txpower
+     * @param [char]  nombreEmisora_  -  Le pasamos un char con el nombre de la emisora
+     * @param N  fabricanteID_  -  Le pasamos un uint16_t con el id del fabricante
+     * @param Z  txPower_  -  Le pasamos un int8_t con el txpower
      *
-     * No devuelve nada
+     * @return No devuelve nada
      */
   // .........................................................
   EmisoraBLE( const char * nombreEmisora_, const uint16_t fabricanteID_,
@@ -83,9 +83,9 @@ public:
      /*
      * Método para encender la emisora 
      *
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
      */
   // .........................................................
   void encenderEmisora() {
@@ -100,10 +100,10 @@ public:
      /*
      * Método para subir datos fake para así comprobar que funciona correctamente la subida de datos a la base de datos
      *
-     * CallbackConexionEstablecida cbce - Le pasamos un objeto CallbackConexionEstablecida que hemos definido arriba
-     * CallbackConexionTerminada cbct - Le pasamos un objeto CallbackConexionTerminada que hemos definido arriba
+     * @param CallbackConexionEstablecida cbce - Le pasamos un objeto CallbackConexionEstablecida que hemos definido arriba
+     * @param CallbackConexionTerminada cbct - Le pasamos un objeto CallbackConexionTerminada que hemos definido arriba
      *
-     * No devuelve nada
+     * @return No devuelve nada
      */
   // .........................................................
   void encenderEmisora( CallbackConexionEstablecida cbce,
@@ -120,9 +120,9 @@ public:
      /*
      * Método para detener anuncio
      *
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
      */
   // .........................................................
   void detenerAnuncio() {
@@ -138,9 +138,9 @@ public:
      /*
      * Método para comprobar si está anunciando mediante un booleano
      *
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * bool: ToF
+     * @return bool: ToF
      */
   // .........................................................
   bool estaAnunciando() {
@@ -151,12 +151,12 @@ public:
    /*
      * Método para amitir anuncio de un beacon
      *
-     * [N] beaconUUID  -  Le pasamos un puntero con un uint8_t con el valor del uuid del beacon
-     * Z   major  -  Le pasamos un int16_t con el valor del major
-     * Z   minor  -  Le pasamos un int16_t con el valor del minor
-     * N   rssi  -  Le pasamos un uint8_t con el valor del rssi
+     * @param [N] beaconUUID  -  Le pasamos un puntero con un uint8_t con el valor del uuid del beacon
+     * @param Z   major  -  Le pasamos un int16_t con el valor del major
+     * @param Z   minor  -  Le pasamos un int16_t con el valor del minor
+     * @param N   rssi  -  Le pasamos un uint8_t con el valor del rssi
      *
-     * No devuelve nada
+     * @return No devuelve nada
      */
   // .........................................................
   void emitirAnuncioIBeacon( uint8_t * beaconUUID, int16_t major, int16_t minor, uint8_t rssi ) {
@@ -252,10 +252,10 @@ public:
      /*
      * Método para emitir un anuncio de un beacon libre
      *
-     * [char]  carga  -  Le pasamos un array de chars con la carga
-     * N  tamanyoCarga  -  Le pasamos un uint8_t con el tamaño de la carga
+     * @param [char]  carga  -  Le pasamos un array de chars con la carga
+     * @param N  tamanyoCarga  -  Le pasamos un uint8_t con el tamaño de la carga
      *
-     * No devuelve nada
+     * @return No devuelve nada
      */
   // .........................................................  
   void emitirAnuncioIBeaconLibre( const char * carga, const uint8_t tamanyoCarga ) {
@@ -322,10 +322,10 @@ public:
    /*
      * Método para añadir un servicio
      *
-     * ServicioEnEmisora  -  Le pasamos un objeto ServicioEnEmisora
-     * servicio  -  Le pasamos un servicio
+     * @param ervicioEnEmisora  -  Le pasamos un objeto ServicioEnEmisora
+     * @param servicio  -  Le pasamos un servicio
      *
-     * bool: ToF
+     * @return bool: ToF
      */
   // .........................................................
   bool anyadirServicio( ServicioEnEmisora & servicio ) {
@@ -349,9 +349,9 @@ public:
     /*
      * Método para añadir un servicio con sus caracteristicas
      *
-     * ServicioEnEmisora  servicio  -  Le pasamos un objeto ServicioEnEmisora
+     * @param ServicioEnEmisora  servicio  -  Le pasamos un objeto ServicioEnEmisora
      *
-     * bool: ToF
+     * @return bool: ToF
      */
   // .........................................................
   bool anyadirServicioConSusCaracteristicas( ServicioEnEmisora & servicio ) { 
@@ -362,10 +362,10 @@ public:
    /*
      * Método para añadir un servicio con sus caracteristicas
      *
-     * ServicioEnEmisora  servicio  -  Le pasamos un objeto ServicioEnEmisora y especificamos que queremos el servicio
-     * ServicioEnEmisora  Caracteristica  -  Le pasamos un objeto ServicioEnEmisora y especificamos que queremos la caracteristica
+     * @param ServicioEnEmisora  servicio  -  Le pasamos un objeto ServicioEnEmisora y especificamos que queremos el servicio
+     * @param ServicioEnEmisora  Caracteristica  -  Le pasamos un objeto ServicioEnEmisora y especificamos que queremos la caracteristica
      *
-     * bool: ToF
+     * @return bool: ToF
      */
   // .........................................................
   template <typename ... T>
@@ -383,9 +383,9 @@ public:
     /*
      * Método para añadir un servicio con sus caracteristicas y activarlo
      *
-     * ServicioEnEmisora servicio  -  Le pasamos un objeto ServicioEnEmisora y especificamos que queremos el servicio
+     * @param ServicioEnEmisora servicio  -  Le pasamos un objeto ServicioEnEmisora y especificamos que queremos el servicio
      *
-     * bool: ToF
+     * @return bool: ToF
      */
   // .........................................................
   
@@ -406,9 +406,9 @@ public:
     /*
      * Método para instalar callback conexion establecida
      *
-     * CallbackConexionEstablecida  cb  -  Le pasamos un objeto CallbackConexionEstablecida declarado arriba
+     * @param CallbackConexionEstablecida  cb  -  Le pasamos un objeto CallbackConexionEstablecida declarado arriba
      *
-     * No devuelve nada
+     * @return No devuelve nada
      */
   // .........................................................
   void instalarCallbackConexionEstablecida( CallbackConexionEstablecida cb ) {
@@ -419,9 +419,9 @@ public:
   /*
      * Método para instalar callback conexion terminada
      *
-     * CallbackConexionTerminada  cb  -  Le pasamos un objeto CallbackConexionTerminada declarado arriba
+     * @param CallbackConexionTerminada  cb  -  Le pasamos un objeto CallbackConexionTerminada declarado arriba
      *
-     * No devuelve nada
+     * @return No devuelve nada
      */
   // .........................................................
   void instalarCallbackConexionTerminada( CallbackConexionTerminada cb ) {
@@ -432,9 +432,9 @@ public:
    /*
      * Método para obtener la conexion
      *
-     * Z  connHandle  -  Le pasamos un uint16_t con la conexion a realizadas
+     * @param Z  connHandle  -  Le pasamos un uint16_t con la conexion a realizadas
      *
-     * No devuelve nada
+     * @return No devuelve nada
      */
   // .........................................................
   BLEConnection * getConexion( uint16_t connHandle ) {

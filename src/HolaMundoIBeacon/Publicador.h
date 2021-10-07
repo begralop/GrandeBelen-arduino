@@ -55,9 +55,9 @@ public:
     /*
      * Constructor de la clase
      *
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
   */
   // ............................................................
   Publicador( ) {
@@ -69,9 +69,9 @@ public:
     /*
      * Método para encender la emisora
      *
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
   */
   // ............................................................
   void encenderEmisora() {
@@ -82,11 +82,11 @@ public:
     /*
      * Método para publicar el CO2
      * 
-     * R  valorCO2  -  Le pasamos en un int16_t el valor del CO2
-     * Z  contador  -  Le pasamos en un uint8_t el valor del contador
-     * N  tiempoEspera  -  Le pasamos en un long el tiempo de espera
+     * @param R  valorCO2  -  Le pasamos en un int16_t el valor del CO2
+     * @param Z  contador  -  Le pasamos en un uint8_t el valor del contador
+     * @param N  tiempoEspera  -  Le pasamos en un long el tiempo de espera
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
   // ............................................................
   void publicarCO2( int16_t valorCO2, uint8_t contador,
@@ -127,11 +127,11 @@ public:
    /*
      * Método para publicar la temperatura
      * 
-     * R  valorTemperatura  -  Le pasamos en un int16_t el valor de la temperatura
-     * Z  contador  -  Le pasamos en un uint8_t el valor del contador
-     * N  tiempoEspera  -  Le pasamos en un long el tiempo de espera
+     * @param R  valorTemperatura  -  Le pasamos en un int16_t el valor de la temperatura
+     * @param Z  contador  -  Le pasamos en un uint8_t el valor del contador
+     * @param N  tiempoEspera  -  Le pasamos en un long el tiempo de espera
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
   // ............................................................
   void publicarTemperatura( int16_t valorTemperatura,

@@ -79,9 +79,9 @@ public:
    /*
      * Constructor de la clase
      * 
-     * [char]  nombreCaracteristica_  -  Le pasamos un char con el nombre de la caracteristica
+     * @param [char]  nombreCaracteristica_  -  Le pasamos un char con el nombre de la caracteristica
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
 	// .........................................................
 	Caracteristica( const char * nombreCaracteristica_ )
@@ -95,12 +95,12 @@ public:
    /*
      * Constructor 2 de la clase
      * 
-     * [char]  nombreCaracteristica_  -  Le pasamos un char con el nombre de la caracteristica
-     * Z  propos  -  Le pasamos un uint8_t
-     * SecureMode_t  permisoRead  -  Para que tenga permiso para leer
-     * SecureMode_t  permisoWrite  -  Para que tenga permiso para escribir
+     * @param [char]  nombreCaracteristica_  -  Le pasamos un char con el nombre de la caracteristica
+     * @param Z  propos  -  Le pasamos un uint8_t
+     * @param SecureMode_t  permisoRead  -  Para que tenga permiso para leer
+     * @param SecureMode_t  permisoWrite  -  Para que tenga permiso para escribir
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
 	// .........................................................
 	Caracteristica( const char * nombreCaracteristica_ ,
@@ -120,9 +120,9 @@ public:
    /*
      * Método para asignar propiedades
      * 
-     * N  props  -  Le pasamos un uint8_t
+     * @param N  props  -  Le pasamos un uint8_t
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
 	// .........................................................
 	void asignarPropiedades ( uint8_t props ) {
@@ -135,10 +135,10 @@ public:
    /*
      * Método para asignar permisos
      * 
-     * SecureMode_t  permisoRead  -  Para que tenga permiso para leer
-     * SecureMode_t  permisoWrite  -  Para que tenga permiso para escribir
+     * @param SecureMode_t  permisoRead  -  Para que tenga permiso para leer
+     * @param SecureMode_t  permisoWrite  -  Para que tenga permiso para escribir
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
 	// .........................................................
 	void asignarPermisos( SecureMode_t permisoRead, SecureMode_t permisoWrite ) {
@@ -150,9 +150,9 @@ public:
    /*
      * Método para asignar tamaños
      * 
-     * N  tam  -  Le pasamos un uint8_t con el tamaño
+     * @param N  tam  -  Le pasamos un uint8_t con el tamaño
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
 	// .........................................................
 	void asignarTamanyoDatos( uint8_t tam ) {
@@ -167,12 +167,12 @@ public:
    /*
      * Método para asignar propiedades, permisos y tamaño de datos
      * 
-     * N  propos  -  Le pasamos un uint8_t
-     * SecureMode_t  permisoRead  -  Para que tenga permiso para leer
-     * SecureMode_t  permisoWrite  -  Para que tenga permiso para escribir
-     * Z  propos  -  Le pasamos un uint8_t
+     * @param N  propos  -  Le pasamos un uint8_t
+     * @param SecureMode_t  permisoRead  -  Para que tenga permiso para leer
+     * @param SecureMode_t  permisoWrite  -  Para que tenga permiso para escribir
+     * @param Z  propos  -  Le pasamos un uint8_t
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
 	// .........................................................
 	void asignarPropiedadesPermisosYTamanyoDatos( uint8_t props,
@@ -189,9 +189,9 @@ public:
    /*
      * Método para escribir datos
      * 
-     * [char]  str  -  Le pasamos un char 
+     * @param [char]  str  -  Le pasamos un char 
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
 	// .........................................................
 	uint16_t escribirDatos( const char * str ) {
@@ -209,9 +209,9 @@ public:
    /*
      * Método para notificar datos
      * 
-     * [char]  str  -  Le pasamos un char 
+     * @param [char]  str  -  Le pasamos un char 
      *
-     * Z  -  Devuelve un uint16_t
+     * @return Z  -  Devuelve un uint16_t
     */
 	// .........................................................
 	uint16_t notificarDatos( const char * str ) {
@@ -225,9 +225,9 @@ public:
    /*
      * Método para instalar callback de caracteristica escrita
      * 
-     * CallbackCaracteristicaEscrita  cb  -  Le pasamos un pbjeto CallbackCaracteristicaEscrita 
+     * @param CallbackCaracteristicaEscrita  cb  -  Le pasamos un pbjeto CallbackCaracteristicaEscrita 
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
 	// .........................................................
 	void instalarCallbackCaracteristicaEscrita( CallbackCaracteristicaEscrita cb ) {
@@ -238,9 +238,9 @@ public:
   /*
      * Método para activar
      * 
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
 	// .........................................................
 	void activar() {
@@ -279,9 +279,9 @@ public:
   /*
      * Constructor de la clase
      * 
-     * [char]  nombreServicio_  -  Le pasamos un char con el nombre del servicio
+     * @param [char]  nombreServicio_  -  Le pasamos un char con el nombre del servicio
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
   // .........................................................
   ServicioEnEmisora( const char * nombreServicio_ )
@@ -295,9 +295,9 @@ public:
    /*
      * Método para escribir un uuid
      * 
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
   // .........................................................
   void escribeUUID() {
@@ -312,9 +312,9 @@ public:
    /*
      * Método para añadir una caracteristica
      * 
-     * Caracteristica  car -  Le pasamos una caracteristica
+     * @param Caracteristica  car -  Le pasamos una caracteristica
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
   // .........................................................
   void anyadirCaracteristica( Caracteristica & car ) {
@@ -325,9 +325,9 @@ public:
    /*
      * Método para activar el servicio
      * 
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
   // .........................................................
   void activarServicio( ) {

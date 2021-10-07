@@ -12,9 +12,9 @@
  /*
      * Método para esperar
      *
-     * L  tiempo  -  Le pasamos un long con el tiempo de espera
+     * @param L  tiempo  -  Le pasamos un long con el tiempo de espera
      *
-     * No devuelve nada
+     * @return No devuelve nada
  */
 // ----------------------------------------------------------
 void esperar (long tiempo) {
@@ -33,9 +33,9 @@ public:
   /*
      * Constructor de la clase
      *
-     * Z  numero  -  Le pasamos un int con el numero 
+     * @param Z  numero  -  Le pasamos un int con el numero 
      *
-     * No devuelve nada
+     * @return No devuelve nada
      */
   // .........................................................
   LED (int numero)
@@ -49,9 +49,9 @@ public:
   /*
      * Método para encender el led
      *
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
   */
   // .........................................................
   void encender () {
@@ -63,9 +63,9 @@ public:
     /*
      * Método para apagar el led
      *
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
   */
   // .........................................................
   void apagar () {
@@ -77,9 +77,9 @@ public:
     /*
      * Método para alternar el led
      *
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
   */
   // .........................................................
   void alternar () {
@@ -94,9 +94,9 @@ public:
     /*
      * Método para hacer brillar el led
      *
-     * L  tiempo  -  Le pasamos un long con el tiempo que debe esperar para brillar 
+     * @param L  tiempo  -  Le pasamos un long con el tiempo que debe esperar para brillar 
      *
-     * No devuelve nada
+     * @return No devuelve nada
   */
   // .........................................................
   void brillar (long tiempo) {

@@ -18,9 +18,9 @@ public:
     /*
      * Constructor de la clase
      * 
-     * L  baudios  -  Le pasamos un long con los baudios
+     * @param L  baudios  -  Le pasamos un long con los baudios
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
   // .........................................................
   PuertoSerie (long baudios) {
@@ -32,9 +32,9 @@ public:
   /*
      * Método para esperar si hay disponible algún puerto
      * 
-     * No le pasamos nada
+     * @param No le pasamos nada
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
   // .........................................................
   void esperarDisponible() {
@@ -49,9 +49,9 @@ public:
     /*
      * Método para escribir
      * 
-     * T  mensaje  -  Le pasamos un mensaje
+     * @param T  mensaje  -  Le pasamos un mensaje
      *
-     * No devuelve nada
+     * @return No devuelve nada
     */
   // .........................................................
   template<typename T>
