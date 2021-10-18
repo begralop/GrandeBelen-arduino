@@ -33,7 +33,7 @@ public:
      * Objeto del tipo emisoraBLE
   */
   EmisoraBLE laEmisora {
-	"GTI-3A", //  nombre emisora
+	"belen", //  nombre emisora
 	  0x004c, // fabricanteID (Apple)
 	  4 // txPower
 	  };
